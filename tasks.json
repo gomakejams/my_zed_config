@@ -58,21 +58,17 @@
   },
 
   // {
-  //   "label": "Odin build (debug)",
-  //   "command": "d:/odin/odin.exe",
-  //   "args": ["build", "$ZED_WORKTREE_ROOT", "-debug"],
-  //   "cwd": "$ZED_WORKTREE_ROOT",
-  // },
-
-  // {
-  //   "label": "Odin build (debug)",
-  //   "command": "./build.bat",
+  //   "label": "Odin run",
+  //   "command": "./run.bat",
   //   "args": [],
   //   "cwd": "$ZED_WORKTREE_ROOT",
+  //   "hide": "on_success",
+  //   "reveal": "no_focus",
+  //   "save": "current",
   // },
 
   {
-    "label": "Odin run",
+    "label": "Run project",
     "command": "./run.bat",
     "args": [],
     "cwd": "$ZED_WORKTREE_ROOT",
