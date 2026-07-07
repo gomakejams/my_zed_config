@@ -7,8 +7,57 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  //"rounded_selection" : true,
   //"buffer_font_family": "Hack",
+  "current_line_highlight": "all",
   "show_whitespaces": "selection",
+  "mouse_wheel_zoom": true,
+  "server_url": "https://zed.dev",
+  "show_wrap_guides": true,
+  "cursor_shape": "bar",
+  "ui_font_family": "Hack",
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "Hack",
+  "cli_default_open_behavior": "existing_window",
+  "proxy": "",
+  "disable_ai": true,
+  "cursor_blink": true,
+  "hide_mouse": "on_typing_and_action",
+  "base_keymap": "VSCode",
+  "ui_font_size": 17.0,
+  "buffer_font_size": 12.0,
+  "code_lens": "off",
+  "show_signature_help_after_edits": false,
+  "colorize_brackets": false,
+  "file_finder" : {
+    "include_ignored" :"smart"
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true,
+    "agent_review": false,
+    "code_actions": false,
+  },
+  "which_key": {
+    "enabled": false,
+  },
+  "tabs": {
+    "show_diagnostics": "all",
+    "git_status": true,
+    "file_icons": false,
+    "show_close_button" : "hover"
+  },
+
+  "active_pane_modifiers": {
+    "border_size": 2.0,
+    "inactive_opacity": 0.6,
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
   "git": {
     "blame": {
       "show_avatar": false,
@@ -20,35 +69,31 @@
     "enable_diff": true,
     "enable_status": false,
   },
-  "mouse_wheel_zoom": true,
   "languages": {
+    "Rust": {
+      "format_on_save": "off",
+      //"language_servers": []  // this disables rust LSP
+    },
     "Odin": {
       "format_on_save": "off",
     },
   },
-  "which_key": {
-    "enabled": false,
-  },
-  "server_url": "https://zed.dev",
-  "show_wrap_guides": true,
-  "cursor_shape": "bar",
-  "ui_font_family": "Hack",
-  "buffer_line_height": "comfortable",
-  "buffer_font_family": "Hack",
-  "cli_default_open_behavior": "existing_window",
-  "proxy": "",
-  "disable_ai": false,
   "status_bar": {
     "show_active_file": true,
     "line_endings_button": true,
     "active_encoding_button": "enabled",
     "active_language_button": true,
+    "cursor_position_button": true,
   },
-  "cursor_blink": true,
   "project_panel": {
     "default_width": 240.0,
     "button": true,
     "dock": "left",
+    "bold_folder_labels": true,
+    "file_icons": false,
+    "diagnostic_badges": true,
+    "git_status_indicator": true,
+    "show_diagnostics" : "all",
   },
   "outline_panel": {
     "dock": "left",
@@ -64,28 +109,55 @@
   "git_panel": {
     "dock": "left",
   },
-  "tabs": {
-    "file_icons": true,
-    "git_status": true,
-  },
   "title_bar": {
     "show_branch_status_icon": true,
     "show_menus": true,
     "show_branch_name": true,
+    "show_sign_in": false,
+    "show_user_menu": false,
+    "show_user_picture": false,
+  },
+  "sticky_scroll": {
+    "enabled": false,
   },
   "terminal": {
     "font_size": 12.0,
     "font_family": "Hack",
+    "cursor_shape": "bar",
   },
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
   },
-  "base_keymap": "VSCode",
-  "ui_font_size": 17.0,
-  "buffer_font_size": 12.0,
-  "theme": "Zenburn",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Zenburn",
+  },
   "lsp": {
+    // i dont like the updates and checks behind my back without my consent ...
+    "rust-analyzer": {
+      "initialization_options": {
+        "cargo": {
+          "autoreload": false,
+        },
+        "check": {
+          "command": "none",
+        },
+        // and dont like so much bloat and distractions in code ...
+        // "lens": {
+        //           "enable": true,
+        //           "references": {
+        //             "adt": { "enable": true },
+        //             "enumVariant": { "enable": true },
+        //             "method": { "enable": true },
+        //             "trait": { "enable": true }
+        //           },
+        //           "methodReferences": true,
+        //           "location": "above_name"
+        // }
+      },
+    },
     "ols": {
       "initialization_options": {
         "enable_hover": true,
@@ -97,6 +169,13 @@
         "enable_format": true,
         "enable_document_links": true,
       },
+    },
+  },
+  "theme_overrides": {
+    "Zenburn": {
+      "search.match_background": "#EEEEEE44",
+      //"border.selected": "#FFAAAACC",
+      //"element.selected": "#FF0000CC"
     },
   },
 }
