@@ -25,12 +25,6 @@
     },
   },
   {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-m ctrl-m": "editor::FoldRecursive",
-    },
-  },
-  {
     "context": "Workspace",
     "unbind": {
       "ctrl-m ctrl-m": "toolchain::AddToolchain",
@@ -39,6 +33,7 @@
   {
     "context": "Editor",
     "bindings": {
+      //"ctrl-m ctrl-m": "editor::FoldRecursive",
       "ctrl-m ctrl-m": "editor::ToggleFold",
     },
   },
@@ -48,4 +43,15 @@
       "ctrl-k ctrl-l": "editor::ToggleFold",
     },
   },
+  {
+    "bindings": {
+      "enter": "project_panel::OpenPermanent"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "enter": "project_panel::Rename"
+    }
+  }
 ]

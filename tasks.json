@@ -67,6 +67,16 @@
   //   "save": "current",
   // },
 
+  // {
+  //   "label": "Run project",
+  //   "command": "./run.bat",
+  //   "args": [],
+  //   "cwd": "$ZED_WORKTREE_ROOT",
+  //   "hide": "on_success",
+  //   "reveal": "no_focus",
+  //   "save": "current",
+  // },
+
   {
     "label": "Run project",
     "command": "./run.bat",
@@ -74,6 +84,7 @@
     "cwd": "$ZED_WORKTREE_ROOT",
     "hide": "on_success",
     "reveal": "no_focus",
-    "save": "current",
+    "save": "current"
   },
+
 ]
