@@ -48,7 +48,6 @@
     "file_icons": false,
     "show_close_button" : "hover"
   },
-
   "active_pane_modifiers": {
     "border_size": 2.0,
     "inactive_opacity": 0.6,
@@ -76,6 +75,18 @@
     },
     "Odin": {
       "format_on_save": "off",
+    },
+    "Zig": {
+      "format_on_save": "off",
+    },
+    "C3": {
+      "format_on_save": "off",
+      "formatter": {
+         "external": {
+           "command": "c3fmt.exe",
+           "arguments": ["--stdin", "--stdout"]
+         }
+      }
     },
   },
   "status_bar": {
